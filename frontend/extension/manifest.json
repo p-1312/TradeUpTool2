@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "CS2 Inventar-Scanner (Web-Plattform v1.2)",
+  "version": "1.2",
+  "description": "Liest das Steam-Inventar aus und sendet es an das lokale Trade-Up-Tool.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://steamcommunity.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  }
+}
