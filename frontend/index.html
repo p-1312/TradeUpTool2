@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>CS2 Trade-Up Plattform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CS2 Trade-Up Plattform</h1>
+            <div class="controls">
+                <label class="switch"><input type="checkbox" id="darkModeToggle"><span class="slider round"></span></label>
+                <span>Dark Mode</span>
+            </div>
+        </header>
+
+        <div class="trade-up-workbench">
+            <h2>Trade-Up Werkbank</h2>
+            <div id="workbenchSlots" class="workbench-slots">
+                <!-- 10 leere Slots werden hier per JS eingefügt -->
+            </div>
+            <div class="workbench-controls">
+                <div id="workbenchInfo">Ziehe 10 Items aus deinem Inventar hierher.</div>
+                <button id="analyzeWorkbenchButton" disabled>Werkbank analysieren</button>
+            </div>
+        </div>
+
+        <main class="main-grid">
+            <aside class="inventory-panel">
+                <h2>Mein Inventar</h2>
+                <div id="inventoryList" class="item-list"><p class="panel-info">Nutze die Chrome-Erweiterung, um dein Inventar hier anzuzeigen.</p></div>
+            </aside>
+            <section class="trade-up-panel">
+                <h2>Mögliche Trade-Ups aus Inventar</h2>
+                <div id="tradeUpList"><p class="panel-info">Keine Trade-Ups berechnet. Inventar ist leer.</p></div>
+            </section>
+        </main>
+        
+        <div class="stammbaum-container">
+            <header class="stammbaum-header">
+                <h2>Trade-Up Stammbaum</h2>
+                <button id="stammbaumBackButton" class="hidden">← Zurück zum vorherigen Skin</button>
+            </header>
+            <div class="stammbaum-controls">
+                <input type="text" id="skinSearchInput" placeholder="Ziel-Skin suchen (z.B. Dragon Lore)...">
+                <div id="skinSearchResults"></div>
+            </div>
+            <div class="stammbaum-grid">
+                <div id="stammbaumDisplay" class="stammbaum-display"><p class="panel-info">Bitte wähle einen Ziel-Skin aus der Suche aus.</p></div>
+                <div id="skinDetailPanel" class="skin-detail-panel"></div>
+            </div>
+        </div>
+    </div>
+    <script src="tradeup_engine.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
